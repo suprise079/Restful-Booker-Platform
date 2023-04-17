@@ -4,7 +4,7 @@
   "description": "UI and api testing with cypress of the restful website. automationintesting.online",
   "main": "app.js",
   "scripts": {
-    "test": "npx cypress run --record --spec \"cypress/e2e/my-spec.cy.js\"",
+    "test": "npx cypress run",
     "cypress:open": "npx cypress open"
   },
   "repository": {
