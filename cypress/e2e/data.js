@@ -1,0 +1,132 @@
+function randomID() {
+  return Math.floor(Math.random() * 1000);
+}
+const data = [
+  {
+    bookingdates: {
+      checkin: "2023-05-01",
+      checkout: "2023-05-05",
+    },
+    depositpaid: true,
+    firstname: "Alice",
+    lastname: "Smith",
+    roomid: randomID(),
+    email: "alice.smith@example.com",
+    phone: "+1-123-456-7890",
+    errorCode: 201,
+  },
+  {
+    bookingdates: {
+      checkin: "2023-06-10",
+      checkout: "2023-06-12",
+    },
+    depositpaid: false,
+    firstname: "Bob",
+    lastname: "Johnson",
+    roomid: randomID(),
+    email: "bob.johnson@example.com",
+    phone: "+44 1234 567890",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+  {
+    bookingdates: {
+      checkin: "2023-07-20",
+      checkout: "2023-07-25",
+    },
+    depositpaid: true,
+    firstname: "Chris",
+    lastname: "Davis",
+    roomid: randomID(),
+    email: "chris.davis@example.com",
+    phone: "+61 3 9005 6222",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+  {
+    bookingdates: {
+      checkin: "2023-08-15",
+      checkout: "2023-08-20",
+    },
+    depositpaid: true,
+    firstname: "David",
+    lastname: "Lee",
+    roomid: randomID(),
+    email: "david.lee@example.com",
+    phone: "+852 9123 4567",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+  {
+    bookingdates: {
+      checkin: "2023-09-01",
+      checkout: "2023-09-10",
+    },
+    depositpaid: false,
+    firstname: "Emily",
+    lastname: "Nguyen",
+    roomid: randomID(),
+    email: "emily.nguyen@example.com",
+    phone: "+1-555-555-5555",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+  {
+    bookingdates: {
+      checkin: "2023-10-12",
+      checkout: "2023-10-16",
+    },
+    depositpaid: true,
+    firstname: "Frank",
+    lastname: "Gonzalez",
+    roomid: randomID(),
+    email: "frank.gonzalez@example.com",
+    phone: "+1-234-567-8901",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+  {
+    bookingdates: {
+      checkin: "2023-11-22",
+      checkout: "2023-11-30",
+    },
+    depositpaid: false,
+    firstname: "Grace",
+    lastname: "Chen",
+    roomid: randomID(),
+    email: "grace.chen@example.com",
+    phone: "+86 10 8888 8888",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+  {
+    bookingdates: {
+      checkin: "2023-12-05",
+      checkout: "2023-12-07",
+    },
+    depositpaid: true,
+    firstname: "Henry",
+    lastname: "Kumar",
+    roomid: 9,
+    email: "henry.kumar@example.com",
+    phone: "+91 9812345678",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+  {
+    bookingdates: {
+      checkin: "2023-08-15",
+      checkout: "2023-08-20",
+    },
+    depositpaid: true,
+    firstname: "David",
+    lastname: "Lee",
+    roomid: 5,
+    email: "david.lee@example.com",
+    phone: "+852 9123 4567",
+    errorCode: 400,
+    error: "BAD_REQUEST",
+  },
+];
+
+export default data;

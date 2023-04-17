@@ -1,0 +1,29 @@
+{
+  "name": "restful_booker",
+  "version": "1.0.0",
+  "description": "UI and api testing with cypress of the restful website. automationintesting.online",
+  "main": "app.js",
+  "scripts": {
+    "test": "npx cypress run --record --spec \"cypress/e2e/my-spec.cy.js\"",
+    "cypress:open": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suprise079/Restful-Booker-Platform.git"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "ui",
+    "api"
+  ],
+  "author": "Suprise Ngoveni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suprise079/Restful-Booker-Platform/issues"
+  },
+  "homepage": "https://github.com/suprise079/Restful-Booker-Platform#readme",
+  "devDependencies": {
+    "cypress": "^12.9.0"
+  }
+}
