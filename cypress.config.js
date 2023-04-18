@@ -8,4 +8,5 @@ module.exports = defineConfig({
     },
   },
   projectId: "ppd3ha",
+  reporter: "mochawesome",
 });
