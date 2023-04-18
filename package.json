@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "npx cypress run",
-    "cypress:open": "npx cypress open"
+    "cypress:open": "npx cypress open",
+    "cloud:run": "npx cypress run --record --key 38e8bc2e-3987-422b-ae6b-0afb23fd929b"
   },
   "repository": {
     "type": "git",
