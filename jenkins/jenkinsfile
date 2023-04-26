@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs "node18"
+    }
+
+    stages{
+
+        stage("Load testing data from excel data sheets"){
+            steps{
+                sh "cypress run --spec cypress/e2e/loadTestingData.cy.js"
+            }
+        }
+
+        stage("e2e UI testing"){
+            parallel{
+                stage("Testing book room UI"){
+                    steps{
+                        sh "cypress run --spec cypress/e2e/bookRoomUI.cy.js"
+                    }
+                }
+
+                stage("Testing sendMessageUI"){
+                    steps{
+                        sh "cypress run --spec cypress/e2e/sendMessageUI.cy.js"
+                    }
+                }
+            }
+        }
+
+        stage("e2e API testing"){
+            parallel{
+                stage("Testing book room api"){
+                    steps{
+                        sh "cypress run --spec cypress/e2e/bookRoomAPI.cy.js"
+                    }
+                }
+
+                stage("Testing send message api"){
+                    steps{
+                        sh "cypress run --spec cypress/e2e/sendMessageAPI.cy.js"
+                    }
+                }
+            }
+        }
+
+        stage("generate cypress cloud report"){
+            sh "npm run cloud:run"
+        }
+
+        stage("Job completed"){
+            steps{
+                echo "COmpleted..."
+            }
+        }
+    }
+}

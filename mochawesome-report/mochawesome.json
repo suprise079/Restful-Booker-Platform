@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-04-26T10:54:28.493Z",
-    "end": "2023-04-26T10:54:32.527Z",
-    "duration": 4034,
+    "start": "2023-04-26T23:36:26.171Z",
+    "end": "2023-04-26T23:36:30.688Z",
+    "duration": 4517,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "32f1ef22-764c-4622-96b6-4a390cdc326b",
+      "uuid": "7c69050e-952d-4419-883d-178218cc937e",
       "title": "",
       "fullFile": "cypress\\e2e\\sendMessageUI.cy.js",
       "file": "cypress\\e2e\\sendMessageUI.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "12cc33fe-57e3-4779-a220-6dc6d6706521",
+          "uuid": "9f117548-87bf-4300-ab74-201e777cbe37",
           "title": "Testing User interface and API of Restful booking platform",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Testing form ui successfully sends message",
               "fullTitle": "Testing User interface and API of Restful booking platform Testing form ui successfully sends message",
               "timedOut": null,
-              "duration": 3987,
+              "duration": 4466,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "face.openSite();\nface.sendMessage();",
               "err": {},
-              "uuid": "27f2256e-2cd2-4ee9-8cd0-dc16172f409d",
-              "parentUUID": "12cc33fe-57e3-4779-a220-6dc6d6706521",
+              "uuid": "18cea38b-5443-4339-be39-c8ff7ed9d898",
+              "parentUUID": "9f117548-87bf-4300-ab74-201e777cbe37",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "27f2256e-2cd2-4ee9-8cd0-dc16172f409d"
+            "18cea38b-5443-4339-be39-c8ff7ed9d898"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3987,
+          "duration": 4466,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
