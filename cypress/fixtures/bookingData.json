@@ -1,0 +1,197 @@
+[
+  {
+    "title": "title",
+    "bookingdates": {
+      "checkin": " bookingdates/checkin",
+      "checkout": "bookingdates/checkout"
+    },
+    "depositpaid": "depositpaid",
+    "firstname": "firstname",
+    "lastname": "lastname",
+    "roomid": "roomid",
+    "email": "email",
+    "phone": "phone",
+    "expectedCode": "expectedCode",
+    "errorMessage": "errorMessage"
+  },
+  {
+    "title": "Testing api with valid data",
+    "bookingdates": {
+      "checkin": 45047,
+      "checkout": 45051
+    },
+    "depositpaid": false,
+    "firstname": "tadaa",
+    "lastname": "Maluleke",
+    "roomid": 1,
+    "email": "tadaa@gmail.com",
+    "phone": 278945654662,
+    "expectedCode": 201,
+    "errorMessage": "\"firstname\": \"tadaa\",\"lastname\": \"Maluleke\""
+  },
+  {
+    "title": "Testing api with same room number",
+    "bookingdates": {
+      "checkin": 45048,
+      "checkout": 45052
+    },
+    "depositpaid": false,
+    "firstname": "John",
+    "lastname": "smith",
+    "roomid": 45,
+    "email": "john.smith@gmail.com",
+    "phone": 278945654662,
+    "expectedCode": 409,
+    "errorMessage": "\"\""
+  },
+  {
+    "title": "Testing api without passing the checkin date",
+    "bookingdates": {
+      "checkin": 45049,
+      "checkout": 45053
+    },
+    "depositpaid": false,
+    "firstname": "pretty",
+    "lastname": "kekana",
+    "roomid": 345,
+    "email": "pretty@gmail.com",
+    "phone": 27894563265378,
+    "expectedCode": 400,
+    "errorMessage": "must not null"
+  },
+  {
+    "title": "Testing api without passing first name",
+    "bookingdates": {
+      "checkin": 45049,
+      "checkout": 45053
+    },
+    "depositpaid": false,
+    "firstname": null,
+    "lastname": "kekana",
+    "roomid": 346,
+    "email": "pretty@gmail.com",
+    "phone": 27894563265378,
+    "expectedCode": 400,
+    "errorMessage": "Firstname should not be blank"
+  },
+  {
+    "title": "Testing api with a name that has 2 characters",
+    "bookingdates": {
+      "checkin": 45049,
+      "checkout": 45053
+    },
+    "depositpaid": false,
+    "firstname": "ma",
+    "lastname": "kekana",
+    "roomid": 347,
+    "email": "pretty@gmail.com",
+    "phone": 27894563265378,
+    "expectedCode": 400,
+    "errorMessage": "size must be between 3 and 18"
+  },
+  {
+    "title": "Testing api with a surname that has 2 characters",
+    "bookingdates": {
+      "checkin": 45049,
+      "checkout": 45053
+    },
+    "depositpaid": false,
+    "firstname": "mandy",
+    "lastname": "ke",
+    "roomid": 348,
+    "email": "pretty@gmail.com",
+    "phone": 27894563265379,
+    "expectedCode": 400,
+    "errorMessage": "size must be between 3 and 30"
+  },
+  {
+    "title": "Testing api with a firstname that has 30 characters",
+    "bookingdates": {
+      "checkin": 45049,
+      "checkout": 45053
+    },
+    "depositpaid": true,
+    "firstname": "tadaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "lastname": "miles",
+    "roomid": 349,
+    "email": "pretty@gmail.com",
+    "phone": 27894563265380,
+    "expectedCode": 400,
+    "errorMessage": "size must be between 3 and 18"
+  },
+  {
+    "title": "Testing with a firstname that has 18 characters",
+    "bookingdates": {
+      "checkin": 45050,
+      "checkout": 45054
+    },
+    "depositpaid": true,
+    "firstname": "mandyyyyyyyyyyyyyy",
+    "lastname": "Miles",
+    "roomid": 350,
+    "email": "mandy@gmail.com",
+    "phone": 27894563265380,
+    "expectedCode": 201,
+    "errorMessage": "\"firstname\": \"mandyyyyyyyyyyyyyy\",\"lastname\": \"Miles\""
+  },
+  {
+    "title": "Testing with a firstname that has 19 characters",
+    "bookingdates": {
+      "checkin": 45050,
+      "checkout": 45054
+    },
+    "depositpaid": true,
+    "firstname": "mandyyyyyyyyyyyyyyy",
+    "lastname": "Miles",
+    "roomid": 351,
+    "email": "mandy@gmail.com",
+    "phone": 27894563265380,
+    "expectedCode": 201,
+    "errorMessage": "\"firstname\": \"mandyyyyyyyyyyyyyy\",\"lastname\": \"Miles\""
+  },
+  {
+    "title": "Testing api with a surname that has 3 characters",
+    "bookingdates": {
+      "checkin": 45050,
+      "checkout": 45051
+    },
+    "depositpaid": true,
+    "firstname": "lil",
+    "lastname": "smith",
+    "roomid": 356,
+    "email": "lilwayne@gmail.com",
+    "phone": 2789456326538090,
+    "expectedCode": 201,
+    "errorMessage": "\"firstname\": \"lil\",\"lastname\": \"Mile\""
+  },
+  {
+    "title": "Testing with a number phone that has a 10 numbers",
+    "bookingdates": {
+      "checkin": 45050,
+      "checkout": 45051
+    },
+    "depositpaid": true,
+    "firstname": "malinda",
+    "lastname": "Khoza",
+    "roomid": 232,
+    "email": "malinda@gmail.com",
+    "phone": 2894568765,
+    "expectedCode": 400,
+    "errorMessage": "size must be between 11 and 21"
+  },
+  {
+    "title": "Testing api with phone number that has 11 number",
+    "bookingdates": {
+      "checkin": 45050,
+      "checkout": 45051
+    },
+    "depositpaid": true,
+    "firstname": "malinda",
+    "lastname": "Khoza",
+    "roomid": 233,
+    "email": "malinda@gmail.com",
+    "phone": 28945687345,
+    "expectedCode": 201,
+    "errorMessage": "\"firstname\": \"malinda\",\"lastname\": \"Khoza\""
+  }
+]
