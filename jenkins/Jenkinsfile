@@ -6,6 +6,12 @@ pipeline {
     }
 
     stages{
+        
+        stage("Install dependecies") {
+            steps {
+                sh "npm i"
+            }
+        }
 
         stage("Load testing data from excel data sheets"){
             steps{
