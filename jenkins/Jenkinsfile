@@ -9,13 +9,16 @@ pipeline {
         
         stage("Install dependecies") {
             steps {
-                sh "npm i"
+                sh "npm cache clean --force"
+                sh "npm install -g npm"
+                sh "npm install"
             }
             
         }
         
         stage("list file structure"){
             steps{
+                sh "cd cypress"
                 sh "ls"
             }
         }
