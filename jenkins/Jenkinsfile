@@ -23,12 +23,7 @@ pipeline {
             }
         }
 
-        stage("Load testing data from excel data sheets"){
-            steps{
-                sh "cypress run --spec cypress/e2e/loadTestingData.cy.js"
-            }
-        }
-
+        
         stage("e2e UI testing"){
             parallel{
                 stage("Testing book room UI"){
