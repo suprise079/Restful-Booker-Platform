@@ -9,21 +9,16 @@ pipeline {
         
         stage("Install dependecies") {
             steps {
-                sh "npm cache clean --force"
-                sh "npm install -g npm"
-                sh "npm install"
-            }
-            
-        }
-        
-        stage("list file structure"){
-            steps{
-                sh "cd cypress"
-                sh "ls"
+                sh "npm i"
             }
         }
 
-        
+        // stage("Load testing data from excel data sheets"){
+        //     steps{
+        //         sh "cypress run --spec cypress/e2e/loadTestingData.cy.js"
+        //     }
+        // }
+
         stage("e2e UI testing"){
             parallel{
                 stage("Testing book room UI"){
