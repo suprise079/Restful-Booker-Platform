@@ -51,7 +51,7 @@ pipeline {
 
         stage("Job completed"){
             steps{
-                echo "COmpleted..."
+                echo "COmpleted...."
             }
         }
     }
