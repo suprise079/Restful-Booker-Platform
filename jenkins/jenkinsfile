@@ -46,7 +46,9 @@ pipeline {
         }
 
         stage("generate cypress cloud report"){
-            sh "npm run cloud:run"
+            steps{
+                sh "npm run cloud:run"
+            }
         }
 
         stage("Job completed"){
