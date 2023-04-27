@@ -2,7 +2,7 @@ describe("Load data from fixture for the tests", () => {
   it("Load data bookingData.json", () => {
     it("Load data from fixture for the test", () => {
       cy.task("parseXlsx", {
-        filePath: "cypress\\fixtures\\bookingData.xlsx",
+        filePath: "../fixtures/bookingData.xlsx",
       }).then((rows) => {
         let dataRows = rows[0].data;
         // let jsonData = [];
@@ -25,14 +25,14 @@ describe("Load data from fixture for the tests", () => {
             errorMessage: row[count++],
           });
         });
-        cy.writeFile("cypress/fixtures/bookingData.json", jsonData);
+        cy.writeFile("../fixtures/bookingData.json", jsonData);
       });
     });
   });
 
   it("Load data messageData.json", () => {
     cy.task("parseXlsx", {
-      filePath: "cypress\\fixtures\\messageData.xlsx",
+      filePath: "../fixtures/messageData.xlsx",
     }).then((rows) => {
       console.log("Rows here: " + rows);
       let dataRows = rows[0].data;
@@ -51,7 +51,7 @@ describe("Load data from fixture for the tests", () => {
           errorMessage: row[count++],
         });
       });
-      cy.writeFile("cypress/fixtures/messageData.json", jsonData);
+      cy.writeFile("../fixtures/messageData.json", jsonData);
     });
   });
 });
