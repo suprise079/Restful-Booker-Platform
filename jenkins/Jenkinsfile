@@ -11,6 +11,9 @@ pipeline {
             steps {
                 sh "npm i"
             }
+            steps{
+                sh "ls"
+            }
         }
 
         stage("Load testing data from excel data sheets"){
