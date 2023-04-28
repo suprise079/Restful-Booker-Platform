@@ -22,6 +22,6 @@ module.exports = defineConfig({
       });
     },
   },
-  projectId: "ppd3ha",
+  projectId: "wbjwwe",
   reporter: "mochawesome",
 });

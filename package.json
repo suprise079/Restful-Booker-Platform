@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx cypress run",
     "cypress:open": "npx cypress open",
-    "cloud:run": "npx cypress run --record --key 38e8bc2e-3987-422b-ae6b-0afb23fd929b",
+    "cloud:run": "cypress run --record --key 3a3b55bd-cf4f-4f02-9e42-e34fdef05a15",
     "generate:report": "npx cypress run --reporter mochawesome"
   },
   "repository": {

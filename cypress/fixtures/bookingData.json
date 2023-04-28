@@ -1,20 +1,5 @@
 [
   {
-    "title": "title",
-    "bookingdates": {
-      "checkin": " bookingdates/checkin",
-      "checkout": "bookingdates/checkout"
-    },
-    "depositpaid": "depositpaid",
-    "firstname": "firstname",
-    "lastname": "lastname",
-    "roomid": "roomid",
-    "email": "email",
-    "phone": "phone",
-    "expectedCode": "expectedCode",
-    "errorMessage": "errorMessage"
-  },
-  {
     "title": "Testing api with valid data",
     "bookingdates": {
       "checkin": 45047,

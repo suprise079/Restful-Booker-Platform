@@ -1,22 +1,102 @@
 [
   {
-    "title": "title",
-    "name": "name",
-    "email": "email",
-    "phone": "phone",
-    "subject": "subject",
-    "description": "description",
-    "expectedCode": "expectedCode",
-    "errorMessage": "expectedMessage"
+    "title": "Testing api with valid data",
+    "name": "Tshepo Maluleke",
+    "email": "tshepo@gmail.com",
+    "phone": "+2787675456782",
+    "subject": "Testing the api",
+    "description": "Testing the api for sending message.",
+    "expectedCode": "201",
+    "errorMessage": "\"name\": \"teshpo\",\"email\": \"maluleke@gmail.com\","
   },
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {}
+  {
+    "title": "Testing api with a name that has 3 characters",
+    "name": "Ts",
+    "email": "tshepo@gmail.com",
+    "phone": "+2787675456782",
+    "subject": "Testing the api",
+    "description": "Testing the api for sending message.",
+    "expectedCode": 400,
+    "errorMessage": "Name size must be 3 to 18 characters"
+  },
+  {
+    "title": "Testing api without entering name",
+    "name": null,
+    "email": "tshepo@gmail.com",
+    "phone": "+2787675456782",
+    "subject": "Testing the api",
+    "description": "Testing the api for sending message.",
+    "expectedCode": 400,
+    "errorMessage": "Name may not be blank"
+  },
+  {
+    "title": "Testing api with a name that has 30 characters",
+    "name": "Mandlaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "email": "mandla@gmail.com",
+    "phone": "+2787675456782",
+    "subject": "Testing the api subject",
+    "description": "Testing the api for sending message description.",
+    "expectedCode": 400,
+    "errorMessage": "Name size must be 3 to 18 characters"
+  },
+  {
+    "title": "Testing api without entering email",
+    "name": "Mandla",
+    "email": null,
+    "phone": "+2787675456782",
+    "subject": "Testing the api subject",
+    "description": "Testing the api for sending message description.",
+    "expectedCode": 400,
+    "errorMessage": "Email may not be blank"
+  },
+  {
+    "title": "Testing api with invalid email",
+    "name": "Madla",
+    "email": "maluleke@gmailom",
+    "phone": "+2787675456782",
+    "subject": "Testing the api subject",
+    "description": "Testing the api for sending message description.",
+    "expectedCode": 400,
+    "errorMessage": "Invalid email address"
+  },
+  {
+    "title": "Testing with a number phone that has a 10 numbers",
+    "name": "Madla",
+    "email": "maluleke@gmailom",
+    "phone": "+289456876",
+    "subject": "Testing the api subject",
+    "description": "Testing the api for sending message description.",
+    "expectedCode": 400,
+    "errorMessage": "Phone must be between 11 and 21 characters."
+  },
+  {
+    "title": "Testing api with number phone that has 11 numbers",
+    "name": "Madla",
+    "email": "maluleke@gmailom",
+    "phone": "+2894568734",
+    "subject": "Testing the api subject",
+    "description": "Testing the api for sending message description.",
+    "expectedCode": 201,
+    "errorMessage": "\"name\": \"Mandla\",\"email\": \"tadda@gmail.com\",\"phone\": \"+2894568734\","
+  },
+  {
+    "title": "Testing api with a subject that has 4 characters",
+    "name": "Madla",
+    "email": "maluleke@gmailom",
+    "phone": "+2894568735456",
+    "subject": "Test",
+    "description": "Testing the api for sending message description.",
+    "expectedCode": 400,
+    "errorMessage": "Subject must be between 5 and 100 characters."
+  },
+  {
+    "title": "Testing api with a subject that has more than 100 characters",
+    "name": "Mandla",
+    "email": "tadda@gmail.com",
+    "phone": "+2894568735456",
+    "subject": "Testing the api with a very long subject written in the text box field to see if it can fit more that 30 characters",
+    "description": "Testing the api for sending message description.",
+    "expectedCode": null,
+    "errorMessage": "Subject must be between 5 and 100 characters"
+  }
 ]

@@ -2,16 +2,15 @@ class APITesting {
   constructor() {}
 
   testBookRoomEndPoint(item) {
-    console.log(item);
     cy.request({
       method: "POST",
       url: "/booking/", // baseUrl is prepend to URL
       failOnStatusCode: false,
       body: {
-        // bookingdates: {
-        //   checkin: item.bookingdates.checkin,
-        //   checkout: item.bookingdates.checkout,
-        // },
+        bookingdates: {
+          checkin: item.bookingdates.checkin,
+          checkout: item.bookingdates.checkout,
+        },
         depositpaid: item.depositpaid,
         firstname: item.firstname,
         lastname: item.lastname,
@@ -20,9 +19,20 @@ class APITesting {
         phone: item.phone,
       },
     }).then((response) => {
+
       if (response.status == item.expectedCode) {
+
         expect(response.status).to.eq(item.expectedCode);
-        // expect(response.errorMesaage).to.contain(item.errorMessage);
+
+        let resMsg = response.body ? response.body : "No response body from server";
+        
+        expect(JSON.stringify(resMsg)).to.contain(item.errorMessage);
+      } 
+      else {
+        if (response.body) {
+          expect(JSON.stringify(response.body)).to.contain(item.errorMessage);
+        }
+        expect(response.status).to.eq(item.expectedCode);
       }
     });
   }
@@ -40,8 +50,23 @@ class APITesting {
         description: item.description,
       },
     }).then((response) => {
-      expect(response.status).to.eq(item.expectedCode);
-      // expect(response.errorMesaage).to.contain(item.errorMessage);
+      if (response.status == item.expectedCode) {
+
+        expect(response.status).to.eq(item.expectedCode);
+
+        let resMsg = response.body ? response.body : "No response body from server";
+
+        
+        expect(JSON.stringify(resMsg)).to.contain(item.errorMessage);
+      }
+      else {
+
+        if (response.body) {
+          expect(JSON.stringify(response.body)).to.contain(item.errorMessage);
+        }
+
+        expect(response.status).to.eq(item.expectedCode);
+      }
     });
   }
 }
