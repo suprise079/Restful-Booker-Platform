@@ -59,8 +59,18 @@ pipeline {
 
         stage("Job completed"){
             steps{
-                echo "COmpleted...."
+                echo "Job completed"
+                echo "Triggering zappier hook..."
+                echo "Sending message to stakeholders through teams..."
             }
         }
     }
+
+    post {
+        always {
+            sh "npm run cloud:run"
+        }
+    }
+
+
 }
